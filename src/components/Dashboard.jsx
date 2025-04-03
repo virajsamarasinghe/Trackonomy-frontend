@@ -80,7 +80,7 @@ const Dashboard = () => {
 
             {/* Bar Chart */}
             <div className="bg-white p-6 rounded shadow mb-8">
-                <h2 className="text-xl font-bold mb-4">Financial Overview</h2>
+                <h2 className="text-xl font-bold mb-4">Financial</h2>
                 <Bar data={chartData} />
             </div>
 

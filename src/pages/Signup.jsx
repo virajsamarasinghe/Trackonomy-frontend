@@ -16,7 +16,7 @@ const Signup = () => {
             return;
         }
         try{
-            const response = await axios.post("http://13.51.175.33:5000/api/auth/signup",{
+            const response = await axios.post("http://13.51.175.33:8080/api/auth/signup",{
                 name,
                 email,
                 password,

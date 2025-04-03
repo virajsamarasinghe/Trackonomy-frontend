@@ -26,8 +26,8 @@ const Dashboard = () => {
                 const token = localStorage.getItem("token");
                 const config = { headers: { "x-auth-token": token } };
 
-                const incomeRes = await axios.get("http://localhost:8080/api/transactions/income", config);
-                const expenseRes = await axios.get("http://localhost:8080/api/transactions/expense", config);
+                const incomeRes = await axios.get("http://13.51.175.33:8080/api/transactions/income", config);
+                const expenseRes = await axios.get("http://13.51.175.33:8080/api/transactions/expense", config);
 
                 const totalIncome = incomeRes.data.reduce((sum, txn) => sum + txn.amount, 0);
                 const totalExpenses = expenseRes.data.reduce((sum, txn) => sum + txn.amount, 0);

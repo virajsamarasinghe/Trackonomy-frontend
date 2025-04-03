@@ -5,7 +5,7 @@ const Home = () => {
     return (
         <div className="min-h-screen bg-gradient-to-r from-blue-600 to-purple-600 text-white">
             <div className="container mx-auto px-6 py-10">
-                <h1 className="text-4xl font-bold mb-6">Welcome to Trackonomy!</h1>
+                <h1 className="text-4xl font-bold mb-6">Welcome to Trackonomy hello!</h1>
                 <p className="mb-8 text-lg">
                     Manage your finances with ease. Track your income, expenses, and set budgets to achieve your financial goals.
                 </p>

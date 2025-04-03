@@ -21,8 +21,8 @@ const Transactions = () => {
                 const token = localStorage.getItem("token");
                 const config = { headers: { "x-auth-token": token } };
                 
-                const incomeRes = await axios.get("http://13.51.175.33:5000/api/transactions/income", config);
-                const expenseRes = await axios.get("http://13.51.175.33:5000/api/transactions/expense", config);
+                const incomeRes = await axios.get("http://13.51.175.33:8080/api/transactions/income", config);
+                const expenseRes = await axios.get("http://13.51.175.33:8080/api/transactions/expense", config);
                 
                 setIncomeTransactions(incomeRes.data);
                 setExpenseTransactions(expenseRes.data);
@@ -44,7 +44,7 @@ const Transactions = () => {
         try {
             const token = localStorage.getItem("token");
             const config = { headers: { "x-auth-token": token } };
-            const response = await axios.post("http://13.51.175.33:5000/api/transactions/income", newIncome, config);
+            const response = await axios.post("http://13.51.175.33:8080/api/transactions/income", newIncome, config);
             setIncomeTransactions([...incomeTransactions, response.data]);
             setNewIncome({ description: "", amount: "", category: "Income" });
         } catch (error) {
@@ -62,7 +62,7 @@ const Transactions = () => {
         try {
             const token = localStorage.getItem("token");
             const config = { headers: { "x-auth-token": token } };
-            const response = await axios.post("http://13.51.175.33:5000/api/transactions/expense", newExpense, config);
+            const response = await axios.post("http://13.51.175.33:8080/api/transactions/expense", newExpense, config);
             setExpenseTransactions([...expenseTransactions, response.data]);
             setNewExpense({ description: "", amount: "", category: "Expenses" });
         } catch (error) {
